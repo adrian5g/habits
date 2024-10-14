@@ -1,0 +1,13 @@
+Backend:
+npm init -y               # inicia o projeto node
+npm install fastify       # instala a lib fastify
+npm install typescript -D # instala o typescript
+npx tsc --init            # inicia o tsconfig.json
+npm install tsx           # permite o node ler .ts
+
+para executar um arquivo typescript:
+tsx arquivo.ts
+npx tsx arquivo.ts
+para assistir um arquivo typescript:
+npx tsx watch arquivo.ts
+tsx watch arquivo.ts
