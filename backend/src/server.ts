@@ -1,13 +1,30 @@
 import Fastify from 'fastify';
+import { PrismaClient } from '@prisma/client';
 
 const app = Fastify();
+const prisma = new PrismaClient()
+
+app.get('/habits', async () => {
+  const beber = await prisma.habit.findMany({
+    where: {
+      title: {
+        startsWith: 'Beber'
+      }
+    }
+  })
+  
+  
+  return beber;
+});
 
 app.get('/', () => {
   return 'Hello world';
 });
 
-app.listen({
-  port: 3333,
-}).then(() => {
-  console.log('HTTP server running on https://localhost:3333');
-});
+app
+  .listen({
+    port: 3333,
+  })
+  .then(() => {
+    console.log('HTTP server running on http://localhost:3333/');
+  });

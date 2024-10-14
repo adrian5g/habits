@@ -16,3 +16,5 @@ Prisma:
 npm i prisma -D                              # instala o prisma
 npm i @prisma/cliente                        # instala o cliente do prisma
 npx prisma init --datasource-provider SQLite # inicia o prisma com SQLite
+npx prisma migrate dev                       # cria as migrations
+npx prisma studio                            # abre o prisma studio
