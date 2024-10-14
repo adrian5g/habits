@@ -1,13 +1,18 @@
 Backend:
 npm init -y               # inicia o projeto node
-npm install fastify       # instala a lib fastify
+npm install fastify       # instala o fastify
 npm install typescript -D # instala o typescript
 npx tsc --init            # inicia o tsconfig.json
 npm install tsx           # permite o node ler .ts
 
-para executar um arquivo typescript:
+Para executar um arquivo Typescript:
 tsx arquivo.ts
 npx tsx arquivo.ts
-para assistir um arquivo typescript:
+para assistir um arquivo Typescript:
 npx tsx watch arquivo.ts
 tsx watch arquivo.ts
+
+Prisma:
+npm i prisma -D                              # instala o prisma
+npm i @prisma/cliente                        # instala o cliente do prisma
+npx prisma init --datasource-provider SQLite # inicia o prisma com SQLite
