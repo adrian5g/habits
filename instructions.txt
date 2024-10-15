@@ -25,5 +25,25 @@ Cors:
 npm i @fastify/cors # instalar o cors
 
 Web:
-npm i -D tailwindcss postcss autoprefixer # instala o tailwind e dependências
-npx tailwindcss init -p                   # o -p para iniciar config do postcss
+
+Primeiro, instale as dependências necessárias executando o seguinte comando no terminal:
+
+npm install tailwindcss postcss autoprefixer
+
+Após a instalação, inicialize o Tailwind CSS e o PostCSS com o comando:
+
+npx tailwindcss init -p
+
+Agora, crie uma pasta chamada "styles" na raiz do projeto e, dentro dessa pasta, crie um arquivo chamado "global.css". No arquivo "global.css", adicione o seguinte conteúdo para incluir as funcionalidades do Tailwind CSS:
+
+@tailwind base; @tailwind components; @tailwind utilities;
+
+Em seguida, importe o arquivo "global.css" no seu arquivo "App.tsx", assim o Tailwind CSS será aplicado globalmente no seu projeto. Basta adicionar o seguinte código de importação no "App.tsx":
+
+import './styles/global.css';
+
+Por fim, no arquivo de configuração do Tailwind (tailwind.config.js), especifique os arquivos onde o Tailwind deve ser aplicado. Adicione o caminho "src/**/*.tsx" na propriedade "content" para garantir que todos os arquivos com extensão tsx dentro da pasta src tenham o Tailwind aplicado:
+
+module.exports = { content: ['./src/**/*.tsx'], theme: { extend: {}, }, plugins: [], }
+
+Com isso, o Tailwind CSS estará configurado e funcionando corretamente em todos os seus arquivos tsx.
