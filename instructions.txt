@@ -1,3 +1,5 @@
+#56m
+
 Backend:
 npm init -y               # inicia o projeto node
 npm install fastify       # instala o fastify
@@ -20,4 +22,8 @@ npx prisma migrate dev                       # cria as migrations
 npx prisma studio                            # abre o prisma studio
 
 Cors:
-npm i @fastify/cors
+npm i @fastify/cors # instalar o cors
+
+Web:
+npm i -D tailwindcss postcss autoprefixer # instala o tailwind e dependências
+npx tailwindcss init -p                   # o -p para iniciar config do postcss
