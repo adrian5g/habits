@@ -1,4 +1,4 @@
-#56m
+Anotações de fixação sobre o projeto:
 
 Backend:
 npm init -y               # inicia o projeto node
@@ -47,3 +47,8 @@ Por fim, no arquivo de configuração do Tailwind (tailwind.config.js), especifi
 module.exports = { content: ['./src/**/*.tsx'], theme: { extend: {}, }, plugins: [], }
 
 Com isso, o Tailwind CSS estará configurado e funcionando corretamente em todos os seus arquivos tsx.
+
+Mobile:
+
+Instalar fonts: (procurar na documentação do expo)
+npx expo install expo-font @expo-google-fonts/inter
