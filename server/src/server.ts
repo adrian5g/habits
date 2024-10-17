@@ -8,20 +8,13 @@ export const prisma = new PrismaClient()
 app.register(cors)
 
 app.get('/habits', async () => {
-  const beber = await prisma.habit.findMany({
-    where: {
-      title: {
-        startsWith: 'Beber'
-      }
-    }
-  })
-  
+  const beber = await prisma.habit.findMany()
   
   return beber;
 });
 
 app.get('/', () => {
-  return 'Hello world';
+   'Hello world';
 });
 
 app
