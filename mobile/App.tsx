@@ -7,6 +7,7 @@ import {
   Inter_800ExtraBold,
 } from '@expo-google-fonts/inter';
 import { Loading } from './src/components/Loading';
+import Button from './src/components/Button';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -29,6 +30,7 @@ export default function App() {
       <Text style={styles.text}>
         Apenas um teste
       </Text>
+      <Button />
     </View>
   );
 }
@@ -41,7 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: '#fff',
+    color: '#FFF',
     fontFamily: 'Inter_600SemiBold'
   },
 });
