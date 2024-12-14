@@ -1,4 +1,4 @@
-import { Text, StatusBar, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 import {
   useFonts,
   Inter_400Regular,
@@ -7,6 +7,7 @@ import {
   Inter_800ExtraBold,
 } from '@expo-google-fonts/inter';
 import { Loading } from './src/components/Loading';
+import { Home } from './src/screens/Home';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,10 +26,8 @@ export default function App() {
 
   return (
     <View className='bg-black flex-1 items-center justify-center'>
+      <Home />
       <StatusBar barStyle={'light-content'} backgroundColor={'transparent'} translucent />
-      <Text className='text-white'>
-        Apenas um teste
-      </Text>
     </View>
   );
 }
